@@ -1,5 +1,7 @@
 # I Don't Know!
-#### Video Demo:  <URL HERE>
+#### Disclaimer: 
+This repository is just used to showcase the code, I can't include the assets used because they are copywrighted.
+La seguente repository è solo per mostrare il codice, non posso includere gli asset usati poichè protetti da copywright.
 #### Description:
 
 This project is game, entirely written in Python using the Pygame module to handle the UI. It is currently a pass and play game, but I'd like to make it multiplayer in the future. 
