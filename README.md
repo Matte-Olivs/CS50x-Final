@@ -1,9 +1,9 @@
 # I Don't Know!
 #### Disclaimer: 
-This repository is just used to showcase the code, I can't include the assets used because they are copywrighted, except for those I left in the "assets" folder.
+This repository is just used to showcase the code, I can't include the assets used because they are protected by copyright, except for those I left in the "assets" folder.
 
 
-La seguente repository è usata solo per mostrare il codice, non posso includere gli asset usati poichè protetti da copywright, ad eccezione per quelli che ho lasciato nella cartella "assets".
+La seguente repository è usata solo per mostrare il codice, non posso includere gli asset usati poichè protetti da copyright, ad eccezione per quelli che ho lasciato nella cartella "assets".
 
 #### Description:
 
