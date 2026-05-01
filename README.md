@@ -10,11 +10,11 @@ La seguente repository è usata solo per mostrare il codice, non posso includere
 This project is game, entirely written in Python using the Pygame module to handle the UI. It is currently a pass and play game, but I'd like to make it multiplayer in the future. 
 I'm unsure about the origin of this game and its name; I've played it with many friends and each one told me a different name for it, so I decided to pick the most approriate one: "I Don't Know!".
 The rules are simple: from 2 to 8 players, it uses a deck of French playing cards. Each player gets 5 cards, then 4, 3 and so on based on the current turn. Each player makes a call, which is how many points they think will be won on that specific round. The sum of the player's calls cannot be equal to the amount of cards drawn on that turn.
-Points are assigned using this hierarchy(higher to lower):  
+Points are assigned using this hierarchy (higher to lower):  
  - suits = hearts, diamonds, clubs, spades
  - values = ace, 3, king, queen, jack, 7, 6, 5, 4, 2
 
-So, for example, a 2 of hearts will win against any diamond, clubs or spades. The ace of hearts is the jolly, and it can count as the highest or lowest card played(declared by the player).
+So, for example, a 2 of hearts will win against any diamond, clubs or spades. The ace of hearts is the jolly, and it can count as the highest or lowest card played (declared by the player).
 If the player's call does not match the points taken, that player will lose 1 life, until there's a single player standing.
 
 
@@ -25,7 +25,7 @@ First we have the core of the project: main.py. I've kept it simple, it mostly r
 
 ### The "common" folder
 
- - constants.py: this module contains constants used in all of the other files of the project. The most important ones are: the current screen dimensions, the SCREEN costant which is the surface used to draw all the pygame objects, a scaler function to adapt all of the object's sizes and dimensions(suggested by ChatGPT), the loaded game assets(from the "assets" folder) and finally some standard constants such as colors, font sizes and button width/height.
+ - constants.py: this module contains constants used in all of the other files of the project. The most important ones are: the current screen dimensions, the SCREEN costant which is the surface used to draw all the pygame objects, a scaler function to adapt all of the object's sizes and dimensions(suggested by ChatGPT), the loaded game assets (from the "assets" folder) and finally some standard constants such as colors, font sizes and button width/height.
 
  - text_handler.py: this module contains a very simple function to display a given string of text on the screen. It also has the option to mark the "to_update" variable to True, if that part of the screen needs to be updated with each interaction.
 
@@ -42,7 +42,7 @@ First we have the core of the project: main.py. I've kept it simple, it mostly r
 
 ### The "menus" folder
 
- - credits.py: a very simple module to display the people who made this project possible, using a Credits class. Thanks to each and everyone one of them(see the "Credits" chapter).
+ - credits.py: a very simple module to display the people who made this project possible, using a Credits class. Thanks to each and everyone one of them (see the "Credits" chapter).
 
  - main_menu.py: the first file that gets used in the project. It displays the main menu of the game using the MenuManager class. It uses status flags to change between the different menu pages.
  The class contains:
@@ -60,7 +60,7 @@ First we have the core of the project: main.py. I've kept it simple, it mostly r
  - deck.py: this is where the cards and deck get created. 
  
     First, there's the Card class:
-     * It tries to load a given card from the assets folder with a try-except block and keeps track of the value and suit. It also has the __repr__(self) and __str__(self) methods to represent the card as a string(for example, Ace of Clubs) and be able to make comparisons between two cards(such as card_1 == card_2).
+     * It tries to load a given card from the assets folder with a try-except block and keeps track of the value and suit. It also has the __repr__(self) and __str__(self) methods to represent the card as a string (for example, Ace of Clubs) and be able to make comparisons between two cards (such as card_1 == card_2).
 
     Then, the Deck class:
      * It tries to load the card's back image first and then the 40 cards using the create_deck(self) method.
@@ -77,7 +77,7 @@ First we have the core of the project: main.py. I've kept it simple, it mostly r
      * handle_input(self, hand, player_pos, events): that checks if a card has been clicked, along with the check_hover(self, hand, player_pos) method.
      * draw_deck(self): simply draws the deck at center of the screen, represented as a single rotated card. It also rotates the deck when distributing cards.
      * draw_player_hands(self, players, pl_num, player_pos): draws the current player's hand if the "reveal" button has been clicked, other players are represented by a single rotated card.
-     * single_card_round(self, players, PLAYER_POS, current_player): draws other player's cards(the rules change when a single card is drawn).
+     * single_card_round(self, players, PLAYER_POS, current_player): draws other player's cards (the rules change when a single card is drawn).
      * draw_played_cards(self, players, PLAYER_POS): draws the played cards in front of each player.
      * animation(self, anim_c, player_pos): animates a given card using the AnimatedCard class and also rotates the it based on the player's position.
 
